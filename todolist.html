@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <div class="gradient"></div>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todolist.html</title>
+</head> 
+<body>
+  <h1>Your To-Do List</h1>
+  <h1>What is your name?</h1>
+
+<form action="ori html gaertianeba.html" method="post">
+    <input type="name" id="name" name="name" required>
+    <br>  <br>
+    <input type="submit" value="Submit"> 
+</form>
+
+
+  <style>
+input[type="submit"]{
+      width: 100px;
+      height: 40px;
+      position: relative;
+      overflow: hidden;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: white;
+      border: none;
+      color: black;
+      border-radius: 10pc;
+      animation: pulse 1s infinite alternate;
+                    }
+
+     @keyframes pulse {
+      0% {
+        transform: scale(1);
+         }
+      100% {
+        transform: scale(1.1);
+           }
+                     }
+.input-container   
+    {
+      margin: 50px;
+      padding: 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      animation: alternate;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid rgb(121, 15, 115);
+      border-radius: 5pc;
+      outline: none;
+      font-size: 17px;
+      transition: border-color 0.3s ease-in-out;
+          }
+
+    input:focus {
+                    border-color: darkmagenta;
+                }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #3a0432a5;
+      font-size: 16px;
+      pointer-events: none;
+      transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+          }
+
+   
+  body
+   {        
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            /* Make sure the body takes the full height of the viewport */
+            text-align: center;
+            margin-top: 200px;
+            font-family: baskervile;
+            font-size: x-large;
+            line-height: 1;
+            color: white;
+            text-shadow: 7px 7px 7px  rgba(0, 0, 0, 0.5);
+     }
+</style>
+</body>
+</html>

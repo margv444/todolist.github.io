@@ -1,0 +1,122 @@
+f<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Bubbles</title>
+    <link rel="stylesheet" href="style_buble.css">
+    <link rel="stylesheet" href="todo.css">
+    <style>
+        /* Add the styles from the first code snippet here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+        body {
+            min-height: 70vh;
+            background: white;
+            font-family: baskervile;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+             }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+                   }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#0c192c, #102040);
+                    }
+
+        .bubbles {
+            position: relative;
+            display: flex;
+            z-index: -100;
+                 }
+
+        .bubbles span {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #4fc3dc;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3de;
+            animation: animate 15s linear infinite;
+            animation-duration: calc(125s / var(--i));
+                      }
+
+        .bubbles span:nth-child(even) {
+            background: #aa11de;
+            box-shadow: 0 0 0 10px #b406ee77, 0 0 50px #aa11de, 0 0 100px #aa11de;
+                                      }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(100vh) scale(0);
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+            }
+                           }
+
+        /* Add the styles from the second code snippet here */
+        .todo-container {
+            text-align: center;
+            background-color: #f34bff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+                        }
+
+        h1 {
+            color: #030101;
+           }
+
+        /* Add other styles as needed */
+    </style>
+</head>
+<body>
+    <!-- Bubbles Container -->
+    <div class="container">
+        <div class="background">
+            <div class="bubbles">
+                <span style="--i:11;"></span>
+                <!-- Add other spans as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- To-Do List Container -->
+    <div class="todo-container">
+        <h1>Hello, <span id="username"></span>!</h1>
+        <div class="tasks">
+            <h2>Your To-Do List</h2>
+            <ul id="taskList"></ul>
+            <div class="add-task">
+                <input type="text" id="taskInput" placeholder="Add a new task">
+                <button onclick="addTask()">Add Task</button>
+                <button onclick="removeCompletedTasks()">Remove Completed Tasks</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
